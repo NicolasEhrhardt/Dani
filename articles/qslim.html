@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><title>Michael Garland - QSlim Simplification Software</title>
+<link rel="stylesheet" href="qslim_files/default.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+</head><body>
+
+
+
+<div id="pageTitle"><div class="floatRight"><span style="font-size: 120%">released July 4, 2004</span>
+<br>(Independence Day)</div> <h1>QSlim 2.1</h1></div>
+<div id="pageLeft"><h2>Main Pages</h2>
+<ul>
+    <li><a href="http://mgarland.org/home.html">home</a></li>
+    <li><a href="http://mgarland.org/research.html">research</a></li>
+    <li><a href="http://mgarland.org/papers.html">papers</a></li>
+    <li><a href="http://mgarland.org/classes.html">classes</a></li>
+    <li><a href="http://mgarland.org/students.html">students</a></li>
+    <li><a href="http://mgarland.org/software.html">software</a></li>
+    <li><a href="http://mgarland.org/contact.html">contact</a></li>
+</ul>
+
+<h2>Quick Links</h2><ul><li><a href="http://mgarland.org/software/qslim21.html">QSlim 2.1</a></li><li><a href="http://mgarland.org/software/qslim20.html">QSlim 2.0</a></li><li><a href="http://mgarland.org/software/qslim10.html">QSlim 1.0</a></li><li><a href="http://mgarland.org/software/libgfx.html">libgfx</a></li></ul>
+
+<h2>Author</h2>
+
+<p>
+<a href="http://mgarland.org/">Michael Garland</a><br>
+</p>
+</div>
+<div id="pageBody"><p>This is the latest verion of my QSlim software
+   package.  The core of the system remains largely the same as in 
+   <a href="http://mgarland.org/software/qslim20.html">Version 2.0</a>.
+   However, some features have been updated and some bugs have been fixed.
+   Notable changes in this release include:
+</p>
+<ul>
+ <li>
+     A new cross-platform GUI based on <a href="http://www.fltk.org/">FLTK</a>.
+ </li>
+
+ <li>
+     Some of the core MixKit code has been 
+     replaced by <a href="http://mgarland.org/software/libgfx.html">libgfx</a> library.
+ </li>
+
+ <li>
+     Compiles with modern compilers (e.g., GCC 3.x).
+ </li>
+</ul>
+<p>This
+   software is <em>not</em> public domain.
+   Please read the 
+   <a href="http://mgarland.org/dist/qslim21-license.txt">licenses</a>
+   for the MixKit library, which covers the
+   majority of the simplification code, and the
+   SlimKit package, which covers the set of programs using the MixKit library.
+   Copies of the GNU
+   <a href="http://www.fsf.org/copyleft/gpl.html">GPL</a>
+   and 
+   <a href="http://www.fsf.org/copyleft/lgpl.html">LGPL</a>
+   licenses are available online.
+</p>
+<p>The immediate motivation for releasing it was that version 2.0 no longer
+   compiled with GCC 3.x compilers.  This version compiles correctly on
+   modern platforms &#8212; I&#8217;ve personally tried it on current versions of
+   Mac OSX, Linux, and
+   Cygwin.  However, I haven&#8217;t provided any default build files for Visual
+   C++ as I don&#8217;t really use VC++ any more.
+</p>
+<p>This is the <i>last</i> release of the MixKit software library.  It
+   actually contains code that had been laying around on my desktop for a
+   quite a while.  I pretty much ceased active development of this code
+   base 3&#8211;4 years ago.  However, I would be happy to post any patches that
+   I discover or that people send to me.  And while this is the last of the
+   MixKit-based versions of QSlim, there may be future QSlim releases based
+   on an entirely different code base.
+</p>
+<p>This
+   software contains the bulk of the code I developed in the course
+   of my doctoral research at Carnegie Mellon University.  Since I
+   developed it for my own research purposes, the code may be a little
+   ugly in places, and the selection of features has been largely driven
+   by what I needed to get my work done.  It&#8217;s also been a place to toy
+   around with experimental features.  However, it&#8217;s proven quite useful
+   to me, and I hope you&#8217;ll find it useful as well.
+</p>
+<p>I am releasing this software in the hope that you&#8217;ll find it useful.
+   If you use my software for anything more substantial than toying
+   around, I&#8217;d be interested to hear about it.  Any other comments you&#8217;d
+   like to make are also welcome.  I&#8217;d also like to encourage you to
+   contribute bug reports, patches, and whatever improvements you might
+   come up with.  If enough people are actively using this software, I
+   may set up a mailing list.  Please send me e-mail if you think this
+   would be a useful resource.
+</p>
+
+<h2>System Overview</h2>
+<pre><code>
+</code></pre><p>This package contains two components, the MixKit library and the
+   SlimKit collection of surface modeling tools.  QSlim is the primary
+   application in the SlimKit collection.
+</p>
+<p>QSlim can be built as both a command-line only &#8216;qslim&#8217; program as well
+   as an interactive &#8216;qvis&#8217; program.  Both programs should compile on
+   pretty much any Unix system, as well as Windows 9x/NT.  There is no
+   support for MacOS, but if someone wants to do the port I&#8217;d very much
+   like to have it.
+   The interactive program requires OpenGL or <a href="http://www.mesa3d.org/">Mesa</a> and the <a href="http://www.fltk.org/">FLTK</a> GUI
+   toolkit.
+</p>
+<p>The <a href="http://mgarland.org/research/quadrics.html">details of the algorithms</a>
+   used in this software package are available online.  A much more
+   authoritative description can be found in my
+   <a href="http://mgarland.org/research/thesis.html">Ph.D.  dissertation</a>, which is now available.
+</p>
+
+<h2>Download</h2>
+<p>The main distribution contains all the necessary source code.  I am
+   also distributing the <a href="http://mgarland.org/research/quadrics.html">sample models</a>
+   which appear in the papers I&#8217;ve published about this
+   algorithm.
+</p>
+
+<h3>Source distribution</h3>
+<ul>
+ <li>
+     <a href="http://mgarland.org/dist/qslim-2.1.tar.gz">.tar.gz file</a>
+    (includes v1.0.2 of the required <a href="http://mgarland.org/software/libgfx.html">libgfx</a> library)
+ </li>
+</ul>
+
+<h3>Precompiled binary distributions</h3>
+<ul>
+ <li>
+     <i>None currently available</i>
+ </li>
+</ul>
+
+<h3>Required libraries</h3>
+<ul>
+ <li>
+     My <a href="http://mgarland.org/software/libgfx.html">libgfx</a> support library.
+ </li>
+
+ <li>
+     <a href="http://www.mesa3d.org/">Mesa</a> is required if you don&#8217;t already have OpenGL
+ </li>
+</ul>
+
+<h2>QSlim Versions</h2>
+<ul>
+ <li>
+     <a href="http://mgarland.org/software/qslim21.html">QSlim 2.1</a>
+ </li>
+
+ <li>
+     <a href="http://mgarland.org/software/qslim20.html">QSlim 2.0</a>
+ </li>
+
+ <li>
+     <a href="http://mgarland.org/software/qslim10.html">QSlim 1.0</a>
+ </li>
+</ul></div>
+
+<div id="pageFooter">
+Last generated: Fri Jan  2 11:14:42 2009
+</div>
+
+
+</body></html>

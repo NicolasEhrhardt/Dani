@@ -1,0 +1,18 @@
+@import "base.css";
+@import "elements.css";
+@import "left.css";
+
+/* Standard geometric size progression (after TeX) */
+.min0 { font-size: 100.00% }
+.min1 { font-size: 83.33% }
+.min2 { font-size: 69.44% }
+.min3 { font-size: 57.87% }
+.min4 { font-size: 48.23% }
+.min5 { font-size: 40.19% }
+.mag0 { font-size: 100.00% }
+.mag1 { font-size: 120.00% }
+.mag2 { font-size: 144.00% }
+.mag3 { font-size: 172.80% }
+.mag4 { font-size: 207.36% }
+.mag5 { font-size: 248.83% }
+
