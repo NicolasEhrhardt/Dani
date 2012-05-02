@@ -1,4 +1,4 @@
-function [] = decode(figure)
+function [imResult] = decode(figure)
     %Algorithm start from here
 
     p = [figure(:).p];
@@ -44,5 +44,5 @@ function [] = decode(figure)
     % Plotting image
     %---------------------------
 
-    imagesc(imResult), axis image; colormap gray(256);
+    imagesc(imResult); axis image; colormap gray(256);
 end
