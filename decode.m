@@ -38,7 +38,7 @@ function [imResult] = decode(figure)
         imResult(i) = bar(i, 1)*col(idTriPoint(idTri(i),1)) + bar(i, 2)*col(idTriPoint(idTri(i),2)) + bar(i, 3)*col(idTriPoint(idTri(i),3));
     end
 
-    imResult = round(imResult);
+    imResult = round(imResult');
 
     %---------------------------
     % Plotting image

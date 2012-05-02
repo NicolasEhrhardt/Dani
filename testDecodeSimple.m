@@ -18,7 +18,7 @@ figure(4).col = 128;
 figure(5).p = [2^(r-1); 2^(r-1)];
 figure(5).col = 0;
 
-figure(6).p = [2^(r-2);2^(r-2)];
+figure(6).p = [2^(r-1);2^(r-2)];
 figure(6).col = 255;
 
 im = decode(figure)
