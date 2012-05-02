@@ -20,6 +20,7 @@ function [imResult] = decode(figure)
     hull = convexHull(tri);
 
     %get the image dimensions and creating new image
+    %Max only computed in the hull : cleverer
     M = max(p(:, hull), [], 2);
     imResult = zeros(M(1), M(2));
 
@@ -38,6 +39,7 @@ function [imResult] = decode(figure)
         imResult(i) = bar(i, 1)*col(idTriPoint(idTri(i),1)) + bar(i, 2)*col(idTriPoint(idTri(i),2)) + bar(i, 3)*col(idTriPoint(idTri(i),3));
     end
 
+    %needs to transpose to keep image orientation
     imResult = round(imResult');
 
     %---------------------------
