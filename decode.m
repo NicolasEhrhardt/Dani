@@ -1,22 +1,48 @@
-%structure of figure
-figure = struct('p', {}, 'col', {})
+function [] = decode(figure)
+    %Algorithm start from here
 
-r = 5
-%size of image : 2^r
-figure(1).p = [-2^(r-1); 2^(r-1)]
-figure(1).col = 0
+    p = [figure(:).p];
+    col = [figure(:).col];
 
-figure(2).p = [2^(r-1); 2^(r-1)]
-figure(2).col = 255
+    %loading delaunay triangulation
+    tri = DelaunayTri(p');
+    idTriPoint = tri.Triangulation;
 
-figure(3).p = [2^(r-1); -2^(r-1)]
-figure(3).col = 0
+    %plottin it
+    triplot(tri);
 
-figure(4).p = [-2^(r-1); -2^(r-1)]
-figure(4).col = 255
+    %---------------------------
+    % Create new image matrix
+    %---------------------------
 
+    %search the image dimension :
+    %first take the convex hull :
+    hull = convexHull(tri);
 
-p = [figure(:).p]
+    %get the image dimensions and creating new image
+    M = max(p(:, hull), [], 2);
+    imResult = zeros(M(1), M(2));
 
-tri = DelaunayTri(p')
-triplot(tri)
+    %loading all points of image
+    [X, Y] = meshgrid(1:M(1), 1:M(2));
+    allPoints = [reshape(X, M(1)*M(2),1)' ; reshape(Y, M(1)*M(2), 1)'];
+
+    %---------------------------
+    % Associating color to each point
+    %---------------------------
+
+    %getting id of triangle and barycentric coords of all points
+    [idTri, bar] = pointLocation(tri, allPoints');
+
+    for i=1:length(allPoints)
+        imResult(i) = bar(i, 1)*col(idTriPoint(idTri(i),1)) + bar(i, 2)*col(idTriPoint(idTri(i),2)) + bar(i, 3)*col(idTriPoint(idTri(i),3));
+    end
+
+    imResult = round(imResult);
+
+    %---------------------------
+    % Plotting image
+    %---------------------------
+
+    imagesc(imResult), axis image; colormap gray(256);
+end
