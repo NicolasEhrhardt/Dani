@@ -1,5 +1,8 @@
 function [imResult] = decode(figure)
-    %Algorithm start from here
+    %Author : Lilley
+    %Input : compressed image ( struct( tuple, color (byte) ) )
+    %Output : image 2D matrix
+    %Algorithm starts from here
 
     p = [figure(:).p];
     col = [figure(:).col];
@@ -9,7 +12,7 @@ function [imResult] = decode(figure)
     idTriPoint = tri.Triangulation;
 
     %plottin it
-    triplot(tri);
+    %triplot(tri);
 
     %---------------------------
     % Create new image matrix
