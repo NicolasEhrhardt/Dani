@@ -1,4 +1,4 @@
-function [mesh, ea] = compress(mesh, n)
+function [mesh, ea] = compress(mesh, n, err)
     %Authors : Lilley & Hippo
     %Input : image (2D matrix) , number of points removed ( int )
     %Output : mesh (struct ( tuple, col, id ))
@@ -15,11 +15,16 @@ function [mesh, ea] = compress(mesh, n)
     %--------------------------
 
     disp('Initializing heap of error');
-    %Heap of anticipated error and error by tri:
-    ea = zeros(N, 1);
-    %loop on all vertexes
-    for i=1:N
-        ea(i) = anticipatedError(meshInit, mesh, tri, i);
+    
+    if exist('err') ~= 1
+        %Heap of anticipated error and error by tri:
+        ea = zeros(N, 1);
+        %loop on all vertexes
+        for i=1:N
+            ea(i) = anticipatedError(meshInit, mesh, tri, i);
+        end
+    else
+        ea = err;
     end
 
     %--------------------------
