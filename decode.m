@@ -38,6 +38,8 @@ function [imResult] = decode(figure)
     %getting id of triangle and barycentric coords of all points
     [idTri, bar] = pointLocation(tri, allPoints');
 
+    disp(idTri);
+
     for i=1:length(allPoints)
         imResult(i) = bar(i, 1)*col(idTriPoint(idTri(i),1)) + bar(i, 2)*col(idTriPoint(idTri(i),2)) + bar(i, 3)*col(idTriPoint(idTri(i),3));
     end
