@@ -7,17 +7,17 @@ function [e] = anticipatedErrorInit(image, w, p)
     mo = mod(p, w);       
     if mo == 1
         if p == 1
-            v = +Inf;
+            v = [+Inf 0];
         elseif p == numel(image) - w + 1	
-            v = +Inf;
+            v = [+Inf 0];
         else
             v = [image(p+1), image(p+w), image(p-w)];
         end
     elseif mo == 0
         if p == w
-            v = +Inf;
+            v = [+Inf 0];
         elseif p == numel(image)	
-            v = +Inf;
+            v = [+Inf 0];
         else
             v = [image(p-1), image(p+w), image(p-w)];
         end
