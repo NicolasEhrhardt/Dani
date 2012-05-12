@@ -1,7 +1,8 @@
 function [mesh, ea] = compress(imageLoc, mesh, err)
     %Authors : Lilley & Hippo
-    %Input : image (2D matrix) , number of points removed ( int )
+    %Input : image (2D matrix), mesh (struct ( tuple, col, id )), err (array of same length of mesh)
     %Output : mesh (struct ( tuple, col, id ))
+    %Description : gives the mesh associated to the AT* compression of the image imageLoc, it is possible to recompress a mesh, better if having its error
     
     image = loadImage(imageLoc);
     disp('Image loaded');
@@ -10,8 +11,10 @@ function [mesh, ea] = compress(imageLoc, mesh, err)
     if exist('mesh') ~= 1
         mesh = createMesh(image);
         disp('Mesh created');
+        fromScratch = 1;
     else
         disp('Mesh loaded');
+        fromScratch = 0;
     end
 
     n = input(['This mesh is ', int2str(numel(mesh)), ' nodes, how many do you want to remove ? ']);
@@ -30,6 +33,7 @@ function [mesh, ea] = compress(imageLoc, mesh, err)
 
     disp('Initializing heap of error');
     
+    %error associated to nodes not given
     if exist('err') ~= 1
         %Heap of anticipated error and error by tri:
         ea = zeros(N, 1);
@@ -37,8 +41,16 @@ function [mesh, ea] = compress(imageLoc, mesh, err)
         %We need length of image :
         w = size(image, 2);
         %loop on all vertexes
-        for i=1:N
-            ea(i) = anticipatedErrorInit(image, w, i);
+        %if it is a first compression
+        if fromScratch ==1
+            for i=1:N
+                ea(i) = anticipatedErrorInit(image, w, i);
+            end
+        %if it is a recompression
+        else
+            for i=1:N
+                ea(i) = anticipatedError(image, mesh, tri, i);
+            end
         end
     else
         ea = err;

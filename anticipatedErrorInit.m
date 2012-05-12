@@ -26,7 +26,7 @@ function [e] = anticipatedErrorInit(image, w, p)
     elseif p > numel(image) - w
         v = [image(p-1), image(p+1), image(p-w)];
     else
-            v = [image(p-1), image(p+1), image(p+w), image(p-w)];
+        v = [image(p-1), image(p+1), image(p+w), image(p-w)];
     end
     e = abs((max(v) - min(v))/2 - image(p));
 end
