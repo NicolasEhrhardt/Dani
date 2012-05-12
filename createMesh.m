@@ -17,9 +17,9 @@ function [mesh] = createMesh(Image,n)
 			mesh(k).col = Image(i,j);
 			mesh(k).id = k;
             if (i == 1 | i == h) & (j == 1 | j == w) 
-                mesh(k).c = 1
+                mesh(k).c = 1;
             else
-                mesh(k).c = 0
+                mesh(k).c = 0;
             end
 		end
 	end

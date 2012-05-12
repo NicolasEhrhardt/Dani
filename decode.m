@@ -29,16 +29,14 @@ function [imResult] = decode(figure)
 
     %loading all points of image
     [X, Y] = meshgrid(1:M(1), 1:M(2));
-    allPoints = [reshape(X, M(1)*M(2),1)' ; reshape(Y, M(1)*M(2), 1)'];
+    allPoints = [reshape(X, M(1)*M(2),1) reshape(Y, M(1)*M(2), 1)];
 
     %---------------------------
     % Associating color to each point
     %---------------------------
 
     %getting id of triangle and barycentric coords of all points
-    [idTri, bar] = pointLocation(tri, allPoints');
-
-    disp(idTri);
+    [idTri, bar] = pointLocation(tri, allPoints);
 
     for i=1:length(allPoints)
         imResult(i) = bar(i, 1)*col(idTriPoint(idTri(i),1)) + bar(i, 2)*col(idTriPoint(idTri(i),2)) + bar(i, 3)*col(idTriPoint(idTri(i),3));
