@@ -1,6 +1,6 @@
-function [mesh, ea] = compress(imageLoc, mesh, err)
+function [mesh, ea] = compress(imageLoc, methodError, mesh, err)
     %Authors : Lilley & Hippo
-    %Input : image (2D matrix), mesh (struct ( tuple, col, id )), err (array of same length of mesh)
+    %Input : image (2D matrix), error methodError (function) , mesh (struct ( tuple, col, id )), err (array of same length of mesh)
     %Output : mesh (struct ( tuple, col, id ))
     %Description : gives the mesh associated to the AT* compression of the image imageLoc, it is possible to recompress a mesh, better if having its error
     
@@ -49,7 +49,7 @@ function [mesh, ea] = compress(imageLoc, mesh, err)
         %if it is a recompression
         else
             for i=1:N
-                ea(i) = anticipatedError(image, mesh, tri, i);
+                ea(i) = anticipatedError(image, methodError, mesh, tri, i);
             end
         end
     else
@@ -75,7 +75,7 @@ function [mesh, ea] = compress(imageLoc, mesh, err)
             disp([int2str(percent), '0 %']);
         end
         %}---------
-
+        
         %finding the point to remove
         [emin imin] = min(ea);
         
@@ -101,7 +101,7 @@ function [mesh, ea] = compress(imageLoc, mesh, err)
         ea(imin) = [];
 
         for i=1:length(pConnex),
-            ea(pConnex(i)) = anticipatedError(image, mesh, tri, pConnex(i));
+            ea(pConnex(i)) = anticipatedError(image, methodError, mesh, tri, pConnex(i));
         end
     end
 end

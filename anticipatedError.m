@@ -1,6 +1,11 @@
-function [e] = anticipatedError(image, mesh, tri, p)
+function [e] = anticipatedError(image, methodError, mesh, tri, p)
     %Authors : Lilley & Hippo
-    %Input : mesh (struct ( tuple, col, id )), mesh (struct ( tuple, col, id )), tri (DelaunayTri), point id (int)
+    %Input : 
+    % mesh ( struct ( tuple, col, id ) ) 
+    % methodError ( function for computing error in triangle )
+    % mesh ( struct ( tuple, col, id ) )
+    % tri ( DelaunayTri )
+    % point id ( int )
     %Output : error (double)
 
     %for corner points
@@ -19,6 +24,11 @@ function [e] = anticipatedError(image, mesh, tri, p)
         triNew = DelaunayTri(tri.X(pConnex, :));
         idTri = pConnex(triNew.Triangulation);
         
+        %dirty fix matlab
+        if numel(idTri) == 3
+            idTri = idTri';
+        end        
+
         %truncating points to rect        
         ma = max(triNew.X, [], 1);
         mi = min(triNew.X, [], 1);
@@ -32,12 +42,9 @@ function [e] = anticipatedError(image, mesh, tri, p)
 
         for i=1:size(idTri, 1)
             allPoints = allPointsRect(id == i, :);
-            idx = sub2ind(size(image), allPoints(:, 1), allPoints(:, 2));
 	        barNew = bar(id == i, :);
             %computing error for each triangle if there is a point inside
-            if length(idx) > 0
-                e = e + sum((  sum(barNew * [mesh(idTri(i, :)).col]', 2) - image(idx)).^2);
-            end
+            e = e + methodError(image, allPoints, mesh(idTri(i, :)), barNew);
         end
     end
 end
