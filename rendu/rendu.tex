@@ -117,6 +117,13 @@ Prenons pour commencer une image avec un certain nombre de bords et de la textur
 
 \subsection{Principe}
 
+Si certains algorithmes partent d'une image complète mais lourde pour l'alléger en enlevant des points là où ils sont le moins utiles, d'autres partent de rien du tout et construisent pas à pas l'image en ajoutant les points. C'est le cas de l'algorithme des bissections.
+
+Dans cet algorithme, on commence avec peu de triangles, mais de grande taille. On les coupera au fur et à mesure, aux meilleurs endroits possible.
+
+Par contre, la triangulation qui en résulte ne sera pas du tout une triangulation de Delaunay. Pire encore, ce sera même une triangulation non-conforme, c'est-à-dire que les arêtes peuvent avoir des points en plein milieu (cf. figure suivante).
+
+Ainsi, pour stocker l'image compressée, il faut stocker non seulement les points (et leur couleur), mais aussi les triangles.
 
 \subsection{Description de l'algorithme}
 
@@ -151,14 +158,74 @@ Coupe selon une médiane
 ///////////
 
 
-
 \paragraph{Critère d'arrêt :}
-On peut se donner un nombre de point à enlever, ou demander à s'arrêter lorsque l'erreur atteint un seuil.
-
-\paragraph{Calcul de l'erreur associée :}
-L'erreur associée à un point est l'erreur entre l'image décompressée à partir du maillage auquel on aurait enlevé ce point et l'image initiale. Celle-ci dépend du choix de la méthode avec laquelle nous calculerons l'erreur.
+On se donne un nombre de points à ajouter.
 
 \subsection{Résultats}
 
-Prenons pour commencer une image avec un certain nombre de bords et de la texture. Comme d'habitude, notre amie Lena fera parfaitement l'affaire. Il faudra regarder de plus près les cheveux et le haut du chapeau pour voir apparaître les premières erreurs.
+\begin{figure}[ht!]
+     \begin{center}
+        \subfigure[Image originale]{%
+            \label{fig:first}
+            \includegraphics[width=0.5\textwidth]{lena.png}
+        }%
+        \subfigure[102144 Noeuds; snr : 3.4489]{%
+           \label{fig:second}
+           \includegraphics[width=0.5\textwidth]{lenaDelau100000.png}
+        }\\ %  ------- End of the first row ----------------------%
+        \subfigure[42144 Noeuds; snr : 9.9287]{%
+            \label{fig:third}
+            \includegraphics[width=0.5\textwidth]{lenaDelau40000.png}
+        }%
+        \subfigure[12144 Noeuds; snr : 25.9734]{%
+            \label{fig:fourth}
+            \includegraphics[width=0.5\textwidth]{lenaDelau10000.png}
+        }\\ %  ------- End of the first row ----------------------%
+        \subfigure[7144 Noeuds; snr : 39.5056]{%
+            \label{fig:fifth}
+            \includegraphics[width=0.5\textwidth]{lenaDelau7000.png}
+        }%
+        \subfigure[4144 Noeuds; snr : 63.0030]{%
+            \label{fig:sixth}
+            \includegraphics[width=0.5\textwidth]{lenaDelau4000.png}
+        }%    
+    \end{center}
+    \caption{%
+        Résultat pour l'algorithme de compression adaptatif
+    }%
+   \label{fig:subfigures}
+\end{figure}
+
+
+\section{Comparaison des deux algorithmes}
+
+\subsection{Stockage}
+
+On cherche tout d'abord quel espace mémoire sera nécessaire au stockage d'un maillage de $n$ points.
+
+\paragraph{Compression adaptative}
+
+Dans l'algorithme de compression adaptative, il suffit de stocker les points et leur couleur, puisqu'on peut retrouver la triangulation de Delaunay facilement. D'où la simple constatation : pour stocker $n$ points, il faut donc stocker $3n$ entiers.
+
+\paragraph{Bissections}
+
+En revanche, pour l'algorithme des bissections, il faut aussi stocker la triangulation (une liste de triangles). Or, à chaque itération de l'algorithme, on rajoute un point et un triangle. Comme on commence avec 4 points et 2 triangles, on obtient que pour stocker $n$ points, il faudra aussi stocker $n-2$ triangles. On devra donc stocker $3*(n-2)$ points pour les triangles en plus des $3n$ entiers pour les points eux-mêmes. Au total, il faut donc stocker $3n + 3(n-2) \sim 6n$ entiers.
+
+\paragraph{Comparaison}
+
+A nombre de points égal, on prend donc 2 fois plus de place avec la méthode des bissections. Pour pouvoir comparer équitablement les deux méthodes, on doit considérer des images avec des nombres de points différents : 2 fois plus de points pour la méthode adaptative que pour la méthode avec bissections.
+
+On note toutefois qu'il pourrait exister des méthodes de stockage plus efficaces pour les bissections avec des arbres binaires.
+
+\subsection{Erreur}
+
+A taille de stockage équivalente, on peut légitimement comparer l'erreur et voir lequel est le plus efficace selon l'erreur $L^p$ :
+
+
+
+
+\subsection{Exemples}
+
+
+
 \end{document}
