@@ -1,11 +1,17 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  6 JUN 2012 19:20
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.6)  6 JUN 2012 20:16
 entering extended mode
  %&-line parsing enabled.
 **rendu.tex
 (./rendu.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, french, basque, loaded.
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size10.clo
@@ -248,7 +254,7 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(/usr/share/texmf-texlive/tex/generic/babel/babel.sty
+(/var/lib/texmf/tex/generic/babel/babel.sty
 Package: babel 2008/07/06 v3.8l The Babel package
 
 (/usr/share/texmf-texlive/tex/generic/babel/frenchb.ldf
@@ -611,12 +617,12 @@ LaTeX Warning: Float too large for page by 21.72287pt on input line 113.
 0000.png (PNG copy)> <./lenaDelau10000.png (PNG copy)> <./lenaDelau7000.png (PN
 G copy)> <./lenaDelau4000.png (PNG copy)>] (./rendu.aux) ) 
 Here is how much of TeX's memory you used:
- 3640 strings out of 495028
- 45730 string characters out of 1181229
- 103944 words of memory out of 3000000
- 6734 multiletter control sequences out of 15000+50000
+ 3642 strings out of 493848
+ 45750 string characters out of 1152824
+ 105443 words of memory out of 3000000
+ 6825 multiletter control sequences out of 15000+50000
  56464 words of font info for 61 fonts, out of 3000000 for 9000
- 28 hyphenation exceptions out of 8191
+ 714 hyphenation exceptions out of 8191
  27i,6n,27p,567b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fon
 ts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/
