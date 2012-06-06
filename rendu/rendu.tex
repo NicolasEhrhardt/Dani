@@ -70,7 +70,7 @@ On recalcule la triangulation de delaunay pour ses points voisins.
 Et on met à jour leur erreur associée.
 
 \paragraph{Critère d'arrêt :}
-On peut se donner un nombre de point à enlever, ou demander à s'arrêter lorsque l'erreur atteint un seuil.
+On peut se donner un nombre de points à enlever, ou demander à s'arrêter lorsque l'erreur atteint un seuil.
 
 \paragraph{Calcul de l'erreur associée :}
 L'erreur associée à un point est l'erreur entre l'image décompressée à partir du maillage auquel on aurait enlevé ce point et l'image initiale. Celle-ci dépend du choix de la méthode avec laquelle nous calculerons l'erreur.
@@ -115,4 +115,50 @@ Prenons pour commencer une image avec un certain nombre de bords et de la textur
 
 \section{Algorithme des bissections}
 
+\subsection{Principe}
+
+
+\subsection{Description de l'algorithme}
+
+\paragraph{Initialisation :}
+
+On part d'un maillage minimal avec les 4 coins et 2 triangles, comme sur la figure :
+
+///////////
+  SCHEMA
+Triangulation initiale
+///////////
+
+\paragraph{Étape i :}
+
+On commence par chercher parmi tous les triangles quel est celui qui porte la plus grande erreur d'approximation, pour le couper en deux. Une fois ce triangle choisi, on doit déterminer quelle est la meilleure manière de le couper. En pratique, on s'autorise 3 coupes possibles, qui correspondent aux 3 médianes du triangle choisi :
+
+///////////
+  SCHEMA
+Médianes d'un triangle
+///////////
+
+On détermine parmi ces 3 médianes laquelle est la coupe la plus avantageuse. Puis on effectue la coupe, autrement dit :
+\begin{itemize}
+	\item - On ajoute un point (le sommet de la médiane qu'on doit créer)
+	\item - On enlève de la triangulation le triangle sur lequel on travaillait
+	\item - On ajoute à la place les deux triangles issus de la coupe
+\end{itemize}
+
+///////////
+  SCHEMA
+Coupe selon une médiane
+///////////
+
+
+
+\paragraph{Critère d'arrêt :}
+On peut se donner un nombre de point à enlever, ou demander à s'arrêter lorsque l'erreur atteint un seuil.
+
+\paragraph{Calcul de l'erreur associée :}
+L'erreur associée à un point est l'erreur entre l'image décompressée à partir du maillage auquel on aurait enlevé ce point et l'image initiale. Celle-ci dépend du choix de la méthode avec laquelle nous calculerons l'erreur.
+
+\subsection{Résultats}
+
+Prenons pour commencer une image avec un certain nombre de bords et de la texture. Comme d'habitude, notre amie Lena fera parfaitement l'affaire. Il faudra regarder de plus près les cheveux et le haut du chapeau pour voir apparaître les premières erreurs.
 \end{document}
