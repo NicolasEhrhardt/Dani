@@ -15,7 +15,7 @@ function [imResult] = decodeGeneric(points, tri)
 
     %search the image dimension :
     %first take the convex hull :
-    M = max(p, [], 2);
+    M = max(ceil(p), [], 2);
 
     %get the image dimensions and creating new image
     %Max only computed in the hull : cleverer
@@ -35,8 +35,8 @@ function [imResult] = decodeGeneric(points, tri)
         pTri = [points(t).p];
         triRep = TriRep([1 2 3], pTri');
         
-        ma = max(pTri, [], 2);
-        mi = min(pTri, [], 2);
+        ma = max(floor(pTri), [], 2);
+        mi = min(floor(pTri), [], 2);
 
         [X, Y] = meshgrid(mi(1):ma(1), mi(2):ma(2));
         allPointsRect = [reshape(X, numel(X), 1) reshape(Y, numel(Y), 1)];
@@ -51,7 +51,7 @@ function [imResult] = decodeGeneric(points, tri)
         %computing barycentric coords - BE CAREFUL : coords can be negative
         bar = cartToBary(triRep, ones(size(allPointsTri, 1), 1), allPointsTri);
         
-        for i=1:length(allPointsTri)
+        for i=1:size(allPointsTri, 1)
             imResult(allPointsTri(i, 1), allPointsTri(i, 2)) = bar(i, 1)*col(t(1)) + bar(i, 2)*col(t(2)) + bar(i, 3)*col(t(3));
         end
     end
