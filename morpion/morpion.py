@@ -34,7 +34,7 @@ class Grid:
         for c in self.occup:
             win=self.checkDir(c,(0,1)) or self.checkDir(c,(1,0)) or self.checkDir(c,(1,1)) or self.checkDir(c,(-1,1))
             if (win):
-                print c
+                #print c
                 return self.get(c[0],c[1])
         return 0
     
@@ -45,8 +45,32 @@ class Grid:
 def playRandom(world,pl):
     nxt=np.random.randint(len(world.free))
     return world.free[nxt]
-    
-            
+
+class Node:
+    def __init__(self, world):
+        self.w = world
+        self.sons = []
+        self.r = 0
+
+    def isLeaf(self):
+        return len(self.sons) == 0
+
+
+#tree = Node(world)
+
+def makeTree(node, pl):
+
+    for c in node.w.free:
+        worldNew = node.w.play(c(0), c(1), pl)
+        if not world.w.haswin():
+            node.sons.append(makeTree(Node(worldNew)), -pl)
+        else:
+            node.sons.append(Node(worldNew), -pl)
+            node.r = pl
+    return node
+
+def playMinMax(world, pl):
+             
     
 class Game:
     def __init__(self,n,nw,player1,player2):
@@ -67,7 +91,7 @@ class Game:
             self.world.play(nxt[0],nxt[1],pl)
             pl=pl*-1
             histo.append(nxt)
-            print self.world.tab
+            #print self.world.tab
         print self.world.hasWin()
         return histo
     
@@ -75,4 +99,4 @@ class Game:
     
 if __name__== "__main__":
     g=Game(5,3,playRandom,playRandom)
-    print g.play()
+    g.play()
