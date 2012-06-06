@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  6 JUN 2012 15:25
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  6 JUN 2012 19:20
 entering extended mode
  %&-line parsing enabled.
 **rendu.tex
@@ -333,9 +333,29 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip43
+\subfigcapskip=\skip44
+\subfigcaptopadj=\dimen108
+\subfigbottomskip=\skip45
+\subfigcapmargin=\dimen109
+\subfiglabelskip=\skip46
+\c@subfigure=\count92
+\c@lofdepth=\count93
+\c@subtable=\count94
+\c@lotdepth=\count95
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip47
+\subfig@bottom=\skip48
+)
 (/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip43
+\@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
@@ -344,49 +364,49 @@ Package: amstext 2000/06/29 v2.01
 (/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks17
-\ex@=\dimen108
+\ex@=\dimen110
 ))
 (/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen109
+\pmbraise@=\dimen111
 )
 (/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count92
+\inf@bad=\count96
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count93
-\leftroot@=\count94
+\uproot@=\count97
+\leftroot@=\count98
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count95
-\DOTSCASE@=\count96
+\classnum@=\count99
+\DOTSCASE@=\count100
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen110
+\big@size=\dimen112
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count97
-\c@MaxMatrixCols=\count98
+\macc@depth=\count101
+\c@MaxMatrixCols=\count102
 \dotsspace@=\muskip10
-\c@parentequation=\count99
-\dspbrk@lvl=\count100
+\c@parentequation=\count103
+\dspbrk@lvl=\count104
 \tag@help=\toks18
-\row@=\count101
-\column@=\count102
-\maxfields@=\count103
+\row@=\count105
+\column@=\count106
+\maxfields@=\count107
 \andhelp@=\toks19
-\eqnshift@=\dimen111
-\alignsep@=\dimen112
-\tagshift@=\dimen113
-\tagwidth@=\dimen114
-\totwidth@=\dimen115
-\lineht@=\dimen116
+\eqnshift@=\dimen113
+\alignsep@=\dimen114
+\tagshift@=\dimen115
+\tagwidth@=\dimen116
+\totwidth@=\dimen117
+\lineht@=\dimen118
 \@envbody=\toks20
-\multlinegap=\skip44
-\multlinetaggap=\skip45
+\multlinegap=\skip50
+\multlinetaggap=\skip51
 \mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
@@ -416,17 +436,16 @@ Package ifpdf Info: pdfTeX in pdf mode detected.
 Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
 Package ifvtex Info: VTeX not detected.
 )
-\Gm@cnth=\count104
-\Gm@cntv=\count105
-\c@Gm@tempcnt=\count106
-\Gm@bindingoffset=\dimen117
-\Gm@wd@mp=\dimen118
-\Gm@odd@mp=\dimen119
-\Gm@even@mp=\dimen120
+\Gm@cnth=\count108
+\Gm@cntv=\count109
+\c@Gm@tempcnt=\count110
+\Gm@bindingoffset=\dimen119
+\Gm@wd@mp=\dimen120
+\Gm@odd@mp=\dimen121
+\Gm@even@mp=\dimen122
 \Gm@dimlist=\toks22
 
-(/usr/share/texmf-texlive/tex/xelatex/xetexconfig/geometry.cfg))
-No file rendu.aux.
+(/usr/share/texmf-texlive/tex/xelatex/xetexconfig/geometry.cfg)) (./rendu.aux)
 \openout1 = `rendu.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -442,6 +461,7 @@ LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 21.
+
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -451,15 +471,15 @@ LaTeX Info: Redefining \up on input line 21.
 
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count107
-\scratchdimen=\dimen121
+\scratchcounter=\count111
+\scratchdimen=\dimen123
 \scratchbox=\box28
-\nofMPsegments=\count108
-\nofMParguments=\count109
+\nofMPsegments=\count112
+\nofMParguments=\count113
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count110
-\MPscratchDim=\dimen122
-\MPnumerator=\count111
+\MPscratchCnt=\count114
+\MPscratchDim=\dimen124
+\MPnumerator=\count115
 \everyMPtoPDFconversion=\toks24
 )
 *geometry auto-detecting driver*
@@ -553,30 +573,68 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 31.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 31.
- [1] [2] (./rendu.aux) ) 
+ [1] <lena.png, id=22, 449.68pt x 337.26pt>
+File: lena.png Graphic file (type png)
+
+<use lena.png> <lenaDelau100000.png, id=23, 449.68pt x 337.26pt>
+File: lenaDelau100000.png Graphic file (type png)
+
+<use lenaDelau100000.png>
+Overfull \hbox (13.33331pt too wide) in paragraph at lines 87--91
+ [][] 
+ []
+
+<lenaDelau40000.png, id=24, 449.68pt x 337.26pt>
+File: lenaDelau40000.png Graphic file (type png)
+ <use lenaDelau40000.png>
+<lenaDelau10000.png, id=25, 449.68pt x 337.26pt>
+File: lenaDelau10000.png Graphic file (type png)
+ <use lenaDelau10000.png>
+Overfull \hbox (13.33331pt too wide) in paragraph at lines 95--99
+ [][][] 
+ []
+
+<lenaDelau7000.png, id=26, 449.68pt x 337.26pt>
+File: lenaDelau7000.png Graphic file (type png)
+ <use lenaDelau7000.png>
+<lenaDelau4000.png, id=27, 449.68pt x 337.26pt>
+File: lenaDelau4000.png Graphic file (type png)
+ <use lenaDelau4000.png>
+Overfull \hbox (13.33331pt too wide) in paragraph at lines 103--108
+ [][][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 21.72287pt on input line 113.
+
+[2] [3 <./lena.png (PNG copy)> <./lenaDelau100000.png (PNG copy)> <./lenaDelau4
+0000.png (PNG copy)> <./lenaDelau10000.png (PNG copy)> <./lenaDelau7000.png (PN
+G copy)> <./lenaDelau4000.png (PNG copy)>] (./rendu.aux) ) 
 Here is how much of TeX's memory you used:
- 3428 strings out of 495028
- 42659 string characters out of 1181229
- 101996 words of memory out of 3000000
- 6539 multiletter control sequences out of 15000+50000
- 50677 words of font info for 59 fonts, out of 3000000 for 9000
+ 3640 strings out of 495028
+ 45730 string characters out of 1181229
+ 103944 words of memory out of 3000000
+ 6734 multiletter control sequences out of 15000+50000
+ 56464 words of font info for 61 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,6n,27p,567b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/us
-r/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvip
-s/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf
-/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx1
-0.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/font
-s/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on rendu.pdf (3 pages, 199773 bytes).
+ 27i,6n,27p,567b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fon
+ts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/
+usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share
+/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmm
+i10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmsy7.pfb>
+Output written on rendu.pdf (4 pages, 997415 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
+ 88 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
 \usepackage{lmodern}
-\usepackage{graphicx}
+\usepackage{graphicx, subfigure}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
@@ -52,7 +52,7 @@ $$ (\sum_x \sum_y \vert \pi_d c(x,y) - c_d(x, y) \vert^p )^{\frac{1}{p}} $$
 
 Cette erreur est contestable nous en ferons la démonstration.
 
-\section{Algorithme anticipatif}
+\section{Algorithme de compression adaptatif}
 
 Si s'intéresser à une triangulation a des avantages sur le plan visuel, il en a aussi sur le plan théorique. On a vu en introduction que l'on stockait les points sous forme de matrice sparse pour gagner en place, mais cela ne nous affranchi pas du stockage de la triangulation, sous forme d'une matrice $n \times 3$. Hormis si l'on travaille avec une triangulation de Delaunay... Évidemment, cette triangulation étant unique, il est inutile de la stocker, elle peut très bien être reconstruite juste avant la décompression en $O(N ln(N))$.
 
@@ -64,7 +64,7 @@ On construit un maillage qui inclut tous les points de l'image ($N$). Chaque poi
 
 \paragraph{Étape i :}
 
-On dispose de N-i points dans notre maillage.
+On dispose de $N-i$ points dans notre maillage.
 On choisit le point auquel est associé la plus petite erreur et on l'enlève du maillage.
 On recalcule la triangulation de delaunay pour ses points voisins.
 Et on met à jour leur erreur associée.
@@ -77,6 +77,40 @@ L'erreur associée à un point est l'erreur entre l'image décompressée à part
 
 \subsection{Résultats}
 
+Prenons pour commencer une image avec un certain nombre de bords et de la texture. Comme d'habitude, notre amie Lena fera parfaitement l'affaire. Il faudra regarder de plus près les cheveux et le haut du chapeau pour voir apparaître les premières erreurs.
+
+\begin{figure}[ht!]
+     \begin{center}
+        \subfigure[Image originale]{%
+            \label{fig:first}
+            \includegraphics[width=0.5\textwidth]{lena.png}
+        }%
+        \subfigure[102144 Noeuds; snr : 3.4489]{%
+           \label{fig:second}
+           \includegraphics[width=0.5\textwidth]{lenaDelau100000.png}
+        }\\ %  ------- End of the first row ----------------------%
+        \subfigure[42144 Noeuds; snr : 9.9287]{%
+            \label{fig:third}
+            \includegraphics[width=0.5\textwidth]{lenaDelau40000.png}
+        }%
+        \subfigure[12144 Noeuds; snr : 25.9734]{%
+            \label{fig:fourth}
+            \includegraphics[width=0.5\textwidth]{lenaDelau10000.png}
+        }\\ %  ------- End of the first row ----------------------%
+        \subfigure[7144 Noeuds; snr : 39.5056]{%
+            \label{fig:fifth}
+            \includegraphics[width=0.5\textwidth]{lenaDelau7000.png}
+        }%
+        \subfigure[4144 Noeuds; snr : 63.0030]{%
+            \label{fig:sixth}
+            \includegraphics[width=0.5\textwidth]{lenaDelau4000.png}
+        }%    
+    \end{center}
+    \caption{%
+        Résultat pour l'algorithme de compression adaptatif
+    }%
+   \label{fig:subfigures}
+\end{figure}
 
 
 \section{Algorithme des bissections}
