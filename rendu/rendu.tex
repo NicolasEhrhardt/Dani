@@ -186,13 +186,13 @@ Prenons pour commencer une image avec un certain nombre de bords et de la textur
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.8\textwidth]{lenaDelauMesh.png}
+\includegraphics[width=0.5\textwidth]{lenaDelauMesh.png}
 \caption{Aperçu du maillage généré}
 \end{figure}
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.8\textwidth]{qualiteErr.png}
+\includegraphics[width=0.5\textwidth]{qualiteErr.png}
 \caption{Qualité des images compressées selon le choix du calcul de l'erreur}
 \end{figure}
 
@@ -215,8 +215,6 @@ Par contre, la triangulation qui en résulte ne sera pas du tout une triangulati
 \paragraph{Initialisation :}
 
 On part d'un maillage minimal avec les 4 coins et 2 triangles, comme sur la figure :
-
-\clearpage
 
 \begin{figure}[ht]
 \centering
@@ -257,27 +255,56 @@ On se donne un nombre de points à ajouter.
 
 Pour pouvoir comparer le rendu avec ce qui s'est fait à l'algorithme précédent, on reprend notre chère Lena, que l'on bissecte sans vergogne. Malgré tout, on a beau augmenter le nombre de points, le résultat n'est jamais aussi probant que dans la compression adaptative. On remarque en particulier que l'erreur ne tend pas vers 0, ce qui est fâcheux.
 
-/////////////// HUM...
+\begin{figure}[ht!]
+     \begin{center}
+        \subfigure[1000 Noeuds, décompressée]{%
+            \label{fig:first}
+            \includegraphics[width=0.5\textwidth]{lenaBissect1000.png}
+        }%
+        \subfigure[1000 Noeuds, maillage]{%
+           \label{fig:second}
+           \includegraphics[width=0.5\textwidth]{lenaBissect1000Mesh.png}
+        }\\ %  ------- End of the first row ----------------------%
+        \subfigure[5000 Noeuds, décompressée]{%
+            \label{fig:third}
+            \includegraphics[width=0.5\textwidth]{lenaBissect5000.png}
+        }%
+        \subfigure[5000 Noeuds, maillage]{%
+            \label{fig:fourth}
+            \includegraphics[width=0.5\textwidth]{lenaBissect5000Mesh.png}
+        }\\ %  ------- End of the first row ----------------------%
+        \subfigure[10000 Noeuds, décompressée]{%
+            \label{fig:fifth}
+            \includegraphics[width=0.5\textwidth]{lenaBissect10000.png}
+        }%
+        \subfigure[10000 Noeuds, maillage]{%
+            \label{fig:sixth}
+            \includegraphics[width=0.5\textwidth]{lenaBissect10000Mesh.png}
+        }%    
+    \end{center}
+    \caption{%
+        Résultat pour l'algorithme de compression adaptatif, Erreur $L^2$
+    }%
+   \label{fig:subfigures}
+\end{figure}
 
+\clearpage
 
 Les résultats de cet algorithme n'ont pas été aussi satisfaisants que dans la compression de Delaunay. En effet, il arrive assez vite dans un minimum local dont il n'arrive pas à sortir. En effet, la manière dont on choisit la coupe dans l'algorithme des bissections va causer le mécanisme suivant :
 \begin{itemize}
 	\item On arrive à un triangle presque plat, qui contient beaucoup de points alignés sur son bord ainsi qu'un unique autre point (le $3^e$ sommet), comme sur la figure suivante :
-////////////////
-Figure avec un triangle dont tous les points sont alignés sur un côté.
-
-	\item Lorsque ce triangle finit par être celui qui a la plus grande erreur cumulée, on le choisit pour le couper.
-	\item Malheureusement, il se peut que la coupe qui sépare les points alignés augmente l'erreur au lieu de la diminuer, donc on prendra systématiquement l'une des autres coupes, qui ne les séparera pas du tout. Et on est ramené à la situation initiale !
-\end{itemize}
-
-Dans cette situation, on voit donc que le triangle fautif sera coupé à tous les coups, et le reste de l'image restera tel quel. On observe d'ailleurs ces structures en éventail lorsqu'on regarde la triangulation obtenue :
-
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.8\textwidth]{badTriangle.png}
+\includegraphics[width=0.4\textwidth]{badTriangle.png}
 \caption{Situation générant des erreurs}
 \end{figure}
+	
+    \item Lorsque ce triangle finit par être celui qui a la plus grande erreur cumulée, on le choisit pour le couper.
+	\item Malheureusement, il se peut que la coupe qui sépare les points alignés augmente l'erreur au lieu de la diminuer, donc on prendra systématiquement l'une des autres coupes, qui ne les séparera pas du tout. Et on est ramené à la situation initiale !
+\end{itemize}
+
+Dans cette situation, on voit donc que le triangle fautif sera coupé à tous les coups, et le reste de l'image restera tel quel. On observe d'ailleurs ces structures en éventail lorsqu'on regarde la triangulation obtenue. 
 
 \section{Comparaison du stockage des deux algorithmes}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  8 JUN 2012 11:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  8 JUN 2012 11:34
 entering extended mode
  %&-line parsing enabled.
 **rendu.tex
@@ -524,6 +524,45 @@ LaTeX Warning: Label `sub@fig:sixth' multiply defined.
 
 LaTeX Warning: Label `fig:subfigures' multiply defined.
 
+
+LaTeX Warning: Label `fig:first' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:first' multiply defined.
+
+
+LaTeX Warning: Label `fig:second' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:second' multiply defined.
+
+
+LaTeX Warning: Label `fig:third' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:third' multiply defined.
+
+
+LaTeX Warning: Label `fig:fourth' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:fourth' multiply defined.
+
+
+LaTeX Warning: Label `fig:fifth' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:fifth' multiply defined.
+
+
+LaTeX Warning: Label `fig:sixth' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sixth' multiply defined.
+
+
+LaTeX Warning: Label `fig:subfigures' multiply defined.
+
 )
 \openout1 = `rendu.aux'.
 
@@ -773,34 +812,72 @@ File: qualiteErr.png Graphic file (type png)
 
 
 
- <./lenaDelauMesh.png (PNG copy)>] [7 <./qualiteErr.png (PNG copy)>] [8
-
-]
-<beginBissect.png, id=64, 449.68pt x 337.26pt>
+ <./lenaDelauMesh.png (PNG copy)> <./qualiteErr.png (PNG copy)>]
+<beginBissect.png, id=58, 449.68pt x 337.26pt>
 File: beginBissect.png Graphic file (type png)
  <use beginBissect.png>
-<triangle.png, id=65, 642.4pt x 401.5pt>
+<triangle.png, id=59, 642.4pt x 401.5pt>
 File: triangle.png Graphic file (type png)
- <use triangle.png>
-<beginBissect2.png, id=66, 449.68pt x 337.26pt>
+ <use triangle.png> [7
+
+ <./beginBissect.png (PNG copy)> <./triangle.png (PNG copy)>]
+<beginBissect2.png, id=63, 449.68pt x 337.26pt>
 File: beginBissect2.png Graphic file (type png)
  <use beginBissect2.png>
-[9
+<lenaBissect1000.png, id=64, 449.68pt x 337.26pt>
+File: lenaBissect1000.png Graphic file (type png)
+ <use lenaBissect1000.png>
+<lenaBissect1000Mesh.png, id=65, 449.68pt x 337.26pt>
+File: lenaBissect1000Mesh.png Graphic file (type png)
 
- <./beginBissect.png (PNG copy)> <./triangle.png (PNG copy)> <./beginBissect2.p
-ng (PNG copy)>] <badTriangle.png, id=70, 290.5254pt x 65.7657pt>
+<use lenaBissect1000Mesh.png>
+Overfull \hbox (13.33331pt too wide) in paragraph at lines 263--267
+ [][] 
+ []
+
+<lenaBissect5000.png, id=66, 449.68pt x 337.26pt>
+File: lenaBissect5000.png Graphic file (type png)
+ <use lenaBissect5000.png>
+<lenaBissect5000Mesh.png, id=67, 449.68pt x 337.26pt>
+File: lenaBissect5000Mesh.png Graphic file (type png)
+
+<use lenaBissect5000Mesh.png>
+Overfull \hbox (13.33331pt too wide) in paragraph at lines 271--275
+ [][][] 
+ []
+
+<lenaBissect10000.png, id=68, 449.68pt x 337.26pt>
+File: lenaBissect10000.png Graphic file (type png)
+ <use lenaBissect10000.png>
+<lenaBissect10000Mesh.png, id=69, 449.68pt x 337.26pt>
+File: lenaBissect10000Mesh.png Graphic file (type png)
+
+<use lenaBissect10000Mesh.png>
+Overfull \hbox (13.33331pt too wide) in paragraph at lines 279--284
+ [][][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 22.97404pt on input line 289.
+
+[8 <./beginBissect2.png (PNG copy)>] [9 <./lenaBissect1000.png (PNG copy)> <./l
+enaBissect1000Mesh.png (PNG copy)> <./lenaBissect5000.png (PNG copy)> <./lenaBi
+ssect5000Mesh.png (PNG copy)> <./lenaBissect10000.png (PNG copy)> <./lenaBissec
+t10000Mesh.png (PNG copy)>] <badTriangle.png, id=76, 290.5254pt x 65.7657pt>
 File: badTriangle.png Graphic file (type png)
 
-<use badTriangle.png> [10 <./badTriangle.png>] [11] (./rendu.aux)
+<use badTriangle.png> [10
+
+ <./badTriangle.png>] (./rendu.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3721 strings out of 495028
- 47569 string characters out of 1181229
+ 3751 strings out of 495028
+ 48323 string characters out of 1181229
  103944 words of memory out of 3000000
- 6800 multiletter control sequences out of 15000+50000
+ 6824 multiletter control sequences out of 15000+50000
  56464 words of font info for 61 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  27i,6n,27p,700b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -817,9 +894,9 @@ share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on rendu.pdf (12 pages, 2280703 bytes).
+Output written on rendu.pdf (11 pages, 2471086 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
+ 135 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
