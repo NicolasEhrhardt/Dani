@@ -227,11 +227,13 @@ On commence par chercher parmi tous les triangles quel est celui qui porte la pl
 \caption{Médianes d'un triangle}
 \end{figure}
 
-On détermine parmi ces 3 médianes laquelle est la coupe la plus avantageuse. Puis on effectue la coupe, autrement dit :
+On détermine parmi ces 3 médianes laquelle est la coupe la plus avantageuse. Pour cela, dans chacune des trois possibilités, on calcule la somme des erreurs des deux triangles qui résulteraient de la coupe. On choisit bien sûr les deux triangles dont la somme des erreurs est la plus petite.
+
+Enfin, on effectue la coupe, autrement dit :
 \begin{itemize}
-	\item - On ajoute un point (le sommet de la médiane qu'on doit créer)
-	\item - On enlève de la triangulation le triangle sur lequel on travaillait
-	\item - On ajoute à la place les deux triangles issus de la coupe
+	\item On ajoute un point (le sommet de la médiane qu'on doit créer)
+	\item On enlève de la triangulation le triangle sur lequel on travaillait
+	\item On ajoute à la place les deux triangles issus de la coupe
 \end{itemize}
 
 
@@ -246,7 +248,23 @@ On se donne un nombre de points à ajouter.
 
 \subsection{Résultats}
 
+Pour pouvoir comparer le rendu avec ce qui s'est fait à l'algorithme précédent, on reprend notre chère Lena, que l'on bissecte sans vergogne. Malgré tout, on a beau augmenter le nombre de points, le résultat n'est jamais aussi probant que dans la compression adaptative. On remarque en particulier que l'erreur ne tend pas vers 0, ce qui est fâcheux.
+
 /////////////// HUM...
+
+
+Les résultats de cet algorithme n'ont pas été aussi satisfaisants que dans la compression de Delaunay. En effet, il arrive assez vite dans un minimum local dont il n'arrive pas à sortir. En effet, la manière dont on choisit la coupe dans l'algorithme des bissections va causer le mécanisme suivant :
+\begin{itemize}
+	\item On arrive à un triangle presque plat, qui contient beaucoup de points alignés sur son bord ainsi qu'un unique autre point (le $3^e$ sommet).
+	\item Lorsque ce triangle finit par être celui qui a la plus grande erreur cumulée, on le choisit pour le couper.
+	\item Malheureusement, il se peut que la coupe qui sépare les points alignés augmente l'erreur au lieu de la diminuer, donc on prendra systématiquement l'une des autres coupes, qui ne les séparera pas du tout. Et on est ramené à la situation initiale !
+\end{itemize}
+
+Dans cette situation, on voit donc que le triangle fautif sera coupé à tous les coups, et le reste de l'image restera tel quel. On observe d'ailleurs ces structures en éventail lorsqu'on regarde la triangulation obtenue :
+
+//////
+Figure de la triangulation
+
 
 \section{Comparaison des deux algorithmes}
 
