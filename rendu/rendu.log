@@ -1,17 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.6)  8 JUN 2012 10:19
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  8 JUN 2012 11:07
 entering extended mode
  %&-line parsing enabled.
 **rendu.tex
 (./rendu.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
-ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
-9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
-skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
-orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
-, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
-rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+yphenation, french, basque, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size10.clo
@@ -254,7 +248,7 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(/var/lib/texmf/tex/generic/babel/babel.sty
+(/usr/share/texmf-texlive/tex/generic/babel/babel.sty
 Package: babel 2008/07/06 v3.8l The Babel package
 
 (/usr/share/texmf-texlive/tex/generic/babel/frenchb.ldf
@@ -769,38 +763,46 @@ LaTeX Warning: Float too large for page by 21.72287pt on input line 183.
 
 [5 <./lenaDelau100000Pro.png (PNG copy)> <./lenaDelau40000Pro.png (PNG copy)> <
 ./lenaDelau10000Pro.png (PNG copy)> <./lenaDelau7000Pro.png (PNG copy)> <./lena
-Delau4000Pro.png (PNG copy)>] <qualiteErr.png, id=52, 449.68pt x 337.26pt>
+Delau4000Pro.png (PNG copy)>]
+<lenaDelauMesh.png, id=52, 493.845pt x 431.211pt>
+File: lenaDelauMesh.png Graphic file (type png)
+ <use lenaDelauMesh.png>
+<qualiteErr.png, id=53, 449.68pt x 337.26pt>
 File: qualiteErr.png Graphic file (type png)
-
-<use qualiteErr.png> [6
-
+ <use qualiteErr.png> [6
 
 
- <./qualiteErr.png (PNG copy)>]
-<beginBissect.png, id=57, 449.68pt x 337.26pt>
+
+ <./lenaDelauMesh.png (PNG copy)>] [7 <./qualiteErr.png (PNG copy)>] [8
+
+]
+<beginBissect.png, id=64, 449.68pt x 337.26pt>
 File: beginBissect.png Graphic file (type png)
  <use beginBissect.png>
-<triangle.png, id=58, 642.4pt x 401.5pt>
+<triangle.png, id=65, 642.4pt x 401.5pt>
 File: triangle.png Graphic file (type png)
  <use triangle.png>
-<beginBissect2.png, id=59, 449.68pt x 337.26pt>
+<beginBissect2.png, id=66, 449.68pt x 337.26pt>
 File: beginBissect2.png Graphic file (type png)
  <use beginBissect2.png>
-[7
+[9
 
  <./beginBissect.png (PNG copy)> <./triangle.png (PNG copy)> <./beginBissect2.p
-ng (PNG copy)>] [8] (./rendu.aux)
+ng (PNG copy)>] <badTriangle.png, id=70, 290.5254pt x 65.7657pt>
+File: badTriangle.png Graphic file (type png)
+
+<use badTriangle.png> [10 <./badTriangle.png>] [11] (./rendu.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3713 strings out of 493848
- 47391 string characters out of 1152824
- 105443 words of memory out of 3000000
- 6883 multiletter control sequences out of 15000+50000
+ 3721 strings out of 495028
+ 47569 string characters out of 1181229
+ 103944 words of memory out of 3000000
+ 6800 multiletter control sequences out of 15000+50000
  56464 words of font info for 61 fonts, out of 3000000 for 9000
- 714 hyphenation exceptions out of 8191
+ 28 hyphenation exceptions out of 8191
  27i,6n,27p,700b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
@@ -815,9 +817,9 @@ share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on rendu.pdf (9 pages, 2221544 bytes).
+Output written on rendu.pdf (12 pages, 2280703 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

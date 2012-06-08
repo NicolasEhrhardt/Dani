@@ -177,19 +177,26 @@ Prenons pour commencer une image avec un certain nombre de bords et de la textur
         }%    
     \end{center}
     \caption{%
-        Résultat pour l'algorithme de compression adaptatif, Erreur $L^\infty$
+        Résultat pour l'algorithme de compression adaptatif, Erreur projetée
     }%
    \label{fig:subfigures}
 \end{figure}
 
 \clearpage
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\textwidth]{lenaDelauMesh.png}
+\caption{Aperçu du maillage généré}
+\end{figure}
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.8\textwidth]{qualiteErr.png}
 \caption{Qualité des images compressées selon le choix du calcul de l'erreur}
 \end{figure}
+
+\clearpage
 
 \section{Algorithme des bissections}
 
@@ -262,9 +269,12 @@ Les résultats de cet algorithme n'ont pas été aussi satisfaisants que dans la
 
 Dans cette situation, on voit donc que le triangle fautif sera coupé à tous les coups, et le reste de l'image restera tel quel. On observe d'ailleurs ces structures en éventail lorsqu'on regarde la triangulation obtenue :
 
-//////
-Figure de la triangulation
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\textwidth]{badTriangle.png}
+\caption{Situation générant des erreurs}
+\end{figure}
 
 \section{Comparaison des deux algorithmes}
 
