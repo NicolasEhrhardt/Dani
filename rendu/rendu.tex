@@ -255,7 +255,10 @@ Pour pouvoir comparer le rendu avec ce qui s'est fait à l'algorithme précéden
 
 Les résultats de cet algorithme n'ont pas été aussi satisfaisants que dans la compression de Delaunay. En effet, il arrive assez vite dans un minimum local dont il n'arrive pas à sortir. En effet, la manière dont on choisit la coupe dans l'algorithme des bissections va causer le mécanisme suivant :
 \begin{itemize}
-	\item On arrive à un triangle presque plat, qui contient beaucoup de points alignés sur son bord ainsi qu'un unique autre point (le $3^e$ sommet).
+	\item On arrive à un triangle presque plat, qui contient beaucoup de points alignés sur son bord ainsi qu'un unique autre point (le $3^e$ sommet), comme sur la figure suivante :
+////////////////
+Figure avec un triangle dont tous les points sont alignés sur un côté.
+
 	\item Lorsque ce triangle finit par être celui qui a la plus grande erreur cumulée, on le choisit pour le couper.
 	\item Malheureusement, il se peut que la coupe qui sépare les points alignés augmente l'erreur au lieu de la diminuer, donc on prendra systématiquement l'une des autres coupes, qui ne les séparera pas du tout. Et on est ramené à la situation initiale !
 \end{itemize}
@@ -266,11 +269,9 @@ Dans cette situation, on voit donc que le triangle fautif sera coupé à tous le
 Figure de la triangulation
 
 
-\section{Comparaison des deux algorithmes}
+\section{Comparaison du stockage des deux algorithmes}
 
-\subsection{Stockage}
-
-On cherche tout d'abord quel espace mémoire sera nécessaire au stockage d'un maillage de $n$ points.
+On cherche à mesurer quel espace mémoire sera nécessaire au stockage d'un maillage de $n$ points, avec les 2 algorithmes traités.
 
 \paragraph{Compression adaptative}
 
@@ -284,13 +285,6 @@ En revanche, pour l'algorithme des bissections, il faut aussi stocker la triangu
 
 A nombre de points égal, on prend donc 2 fois plus de place avec la méthode des bissections. Pour pouvoir comparer équitablement les deux méthodes, on doit considérer des images avec des nombres de points différents : 2 fois plus de points pour la méthode adaptative que pour la méthode avec bissections.
 
-On note toutefois qu'il pourrait exister des méthodes de stockage plus efficaces pour les bissections avec des arbres binaires.
-
-\subsection{Erreur}
-
-A taille de stockage équivalente, on peut légitimement comparer l'erreur et voir lequel est le plus efficace selon l'erreur $L^p$ :
-
-\subsection{Exemples}
-
+On note toutefois qu'il pourrait exister des méthodes de stockage plus efficaces pour les bissections avec des arbres.
 
 \end{document}
