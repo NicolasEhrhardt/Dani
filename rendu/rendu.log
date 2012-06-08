@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  8 JUN 2012 00:25
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  8 JUN 2012 09:37
 entering extended mode
  %&-line parsing enabled.
 **rendu.tex
@@ -687,30 +687,73 @@ LaTeX Warning: Float too large for page by 21.72287pt on input line 148.
 py)> <./lenaDelau4000.png (PNG copy)>] [4 <./lenaDelau100000Linf.png (PNG copy)
 > <./lenaDelau40000Linf.png (PNG copy)> <./lenaDelau10000Linf.png (PNG copy)> <
 ./lenaDelau7000Linf.png (PNG copy)> <./lenaDelau4000Linf.png (PNG copy)>]
-<beginBissect.png, id=44, 449.68pt x 337.26pt>
+File: lena.png Graphic file (type png)
+
+<use lena.png> <lenaDelau100000Pro.png, id=44, 449.68pt x 337.26pt>
+File: lenaDelau100000Pro.png Graphic file (type png)
+
+<use lenaDelau100000Pro.png>
+Overfull \hbox (13.33331pt too wide) in paragraph at lines 157--161
+ [][] 
+ []
+
+<lenaDelau40000Pro.png, id=45, 449.68pt x 337.26pt>
+File: lenaDelau40000Pro.png Graphic file (type png)
+
+<use lenaDelau40000Pro.png>
+<lenaDelau10000Pro.png, id=46, 449.68pt x 337.26pt>
+File: lenaDelau10000Pro.png Graphic file (type png)
+
+<use lenaDelau10000Pro.png>
+Overfull \hbox (13.33331pt too wide) in paragraph at lines 165--169
+ [][][] 
+ []
+
+<lenaDelau7000Pro.png, id=47, 449.68pt x 337.26pt>
+File: lenaDelau7000Pro.png Graphic file (type png)
+ <use lenaDelau7000Pro.png>
+<lenaDelau4000Pro.png, id=48, 449.68pt x 337.26pt>
+File: lenaDelau4000Pro.png Graphic file (type png)
+ <use lenaDelau4000Pro.png>
+Overfull \hbox (13.33331pt too wide) in paragraph at lines 173--178
+ [][][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 21.72287pt on input line 183.
+
+[5 <./lenaDelau100000Pro.png (PNG copy)> <./lenaDelau40000Pro.png (PNG copy)> <
+./lenaDelau10000Pro.png (PNG copy)> <./lenaDelau7000Pro.png (PNG copy)> <./lena
+Delau4000Pro.png (PNG copy)>] <qualiteErr.png, id=52, 449.68pt x 337.26pt>
+File: qualiteErr.png Graphic file (type png)
+
+<use qualiteErr.png> <beginBissect.png, id=53, 449.68pt x 337.26pt>
 File: beginBissect.png Graphic file (type png)
- <use beginBissect.png> [5
+
+<use beginBissect.png> [6
 
 
- <./beginBissect.png (PNG copy)>] <triangle.png, id=48, 642.4pt x 401.5pt>
+
+ <./qualiteErr.png (PNG copy)>] [7 <./beginBissect.png (PNG copy)>] <triangle.p
+ng, id=61, 642.4pt x 401.5pt>
 File: triangle.png Graphic file (type png)
-
-<use triangle.png> <beginBissect2.png, id=49, 449.68pt x 337.26pt>
+ <use triangle.png>
+<beginBissect2.png, id=62, 449.68pt x 337.26pt>
 File: beginBissect2.png Graphic file (type png)
+ <use beginBissect2.png>
+[8
 
-<use beginBissect2.png> [6
-
- <./triangle.png (PNG copy)> <./beginBissect2.png (PNG copy)>] [7] (./rendu.aux
-)
+ <./triangle.png (PNG copy)> <./beginBissect2.png (PNG copy)>] [9]
+(./rendu.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3679 strings out of 495028
- 46644 string characters out of 1181229
+ 3709 strings out of 495028
+ 47348 string characters out of 1181229
  103944 words of memory out of 3000000
- 6766 multiletter control sequences out of 15000+50000
+ 6790 multiletter control sequences out of 15000+50000
  56464 words of font info for 61 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  27i,6n,27p,700b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -727,9 +770,9 @@ share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on rendu.pdf (8 pages, 1619004 bytes).
+Output written on rendu.pdf (10 pages, 2220391 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
+ 122 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

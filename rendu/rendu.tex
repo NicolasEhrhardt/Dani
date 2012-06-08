@@ -149,6 +149,48 @@ Prenons pour commencer une image avec un certain nombre de bords et de la textur
 
 \clearpage
 
+\begin{figure}[ht!]
+     \begin{center}
+        \subfigure[Image originale]{%
+            \label{fig:first}
+            \includegraphics[width=0.5\textwidth]{lena.png}
+        }%
+        \subfigure[102144 Noeuds; snr : 12.1013]{%
+           \label{fig:second}
+           \includegraphics[width=0.5\textwidth]{lenaDelau100000Pro.png}
+        }\\ %  ------- End of the first row ----------------------%
+        \subfigure[42144 Noeuds; snr : 23.6226]{%
+            \label{fig:third}
+            \includegraphics[width=0.5\textwidth]{lenaDelau40000Pro.png}
+        }%
+        \subfigure[12144 Noeuds; snr : 36.7843]{%
+            \label{fig:fourth}
+            \includegraphics[width=0.5\textwidth]{lenaDelau10000Pro.png}
+        }\\ %  ------- End of the first row ----------------------%
+        \subfigure[7144 Noeuds; snr : 57.8413]{%
+            \label{fig:fifth}
+            \includegraphics[width=0.5\textwidth]{lenaDelau7000Pro.png}
+        }%
+        \subfigure[4144 Noeuds; snr : 105.7261]{%
+            \label{fig:sixth}
+            \includegraphics[width=0.5\textwidth]{lenaDelau4000Pro.png}
+        }%    
+    \end{center}
+    \caption{%
+        Résultat pour l'algorithme de compression adaptatif, Erreur $L^\infty$
+    }%
+   \label{fig:subfigures}
+\end{figure}
+
+\clearpage
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\textwidth]{qualiteErr.png}
+\caption{Qualité des images compressées selon le choix du calcul de l'erreur}
+\end{figure}
+
 \section{Algorithme des bissections}
 
 \subsection{Principe}
