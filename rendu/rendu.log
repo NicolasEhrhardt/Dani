@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.6)  8 JUN 2012 09:44
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.6)  8 JUN 2012 10:19
 entering extended mode
  %&-line parsing enabled.
 **rendu.tex
@@ -772,33 +772,33 @@ LaTeX Warning: Float too large for page by 21.72287pt on input line 183.
 Delau4000Pro.png (PNG copy)>] <qualiteErr.png, id=52, 449.68pt x 337.26pt>
 File: qualiteErr.png Graphic file (type png)
 
-<use qualiteErr.png> <beginBissect.png, id=53, 449.68pt x 337.26pt>
+<use qualiteErr.png> [6
+
+
+
+ <./qualiteErr.png (PNG copy)>]
+<beginBissect.png, id=57, 449.68pt x 337.26pt>
 File: beginBissect.png Graphic file (type png)
-
-<use beginBissect.png> [6
-
-
-
- <./qualiteErr.png (PNG copy)>] [7 <./beginBissect.png (PNG copy)>] <triangle.p
-ng, id=61, 642.4pt x 401.5pt>
+ <use beginBissect.png>
+<triangle.png, id=58, 642.4pt x 401.5pt>
 File: triangle.png Graphic file (type png)
  <use triangle.png>
-<beginBissect2.png, id=62, 449.68pt x 337.26pt>
+<beginBissect2.png, id=59, 449.68pt x 337.26pt>
 File: beginBissect2.png Graphic file (type png)
  <use beginBissect2.png>
-[8
+[7
 
- <./triangle.png (PNG copy)> <./beginBissect2.png (PNG copy)>] [9]
-(./rendu.aux)
+ <./beginBissect.png (PNG copy)> <./triangle.png (PNG copy)> <./beginBissect2.p
+ng (PNG copy)>] [8] (./rendu.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3711 strings out of 493848
- 47368 string characters out of 1152824
+ 3713 strings out of 493848
+ 47391 string characters out of 1152824
  105443 words of memory out of 3000000
- 6881 multiletter control sequences out of 15000+50000
+ 6883 multiletter control sequences out of 15000+50000
  56464 words of font info for 61 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  27i,6n,27p,700b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -815,9 +815,9 @@ share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on rendu.pdf (10 pages, 2220391 bytes).
+Output written on rendu.pdf (9 pages, 2221544 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
+ 119 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
